@@ -1,0 +1,24 @@
+import 'dart:io';
+
+void main(List<String> args) {
+  //SAMUEL CASTAÑO CARDONA - EJE CONDICIONALES DOBLES 01
+  /*
+  Desarrollar un algoritmo que lea dos números y los imprima en forma ascendente.
+  */
+
+
+  //DEFINICION vbles
+  double num1, num2;
+
+  //ENTRADA Alg
+  print("Ingrese numero 1 y 2");
+  num1 = double.parse(stdin.readLineSync()!);
+  num2 = double.parse(stdin.readLineSync()!);
+
+  //PROCESO Y SALIDA Alg
+  if (num1 > num2) {
+    print("$num1, $num1");
+  }else{
+    print("$num1, $num2");
+  }
+}
