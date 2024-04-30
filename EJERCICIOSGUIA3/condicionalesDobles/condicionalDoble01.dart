@@ -6,8 +6,7 @@ void main(List<String> args) {
   Desarrollar un algoritmo que lea dos números y los imprima en forma ascendente.
   */
 
-
-  //DEFINICION vbles
+  //DEFINIR vbles
   double num1, num2;
 
   //ENTRADA Alg
@@ -15,10 +14,10 @@ void main(List<String> args) {
   num1 = double.parse(stdin.readLineSync()!);
   num2 = double.parse(stdin.readLineSync()!);
 
-  //PROCESO Y SALIDA Alg
+  //PROCESO/ SALIDA Alg
   if (num1 > num2) {
     print("$num1, $num1");
-  }else{
+  } else {
     print("$num1, $num2");
   }
 }
