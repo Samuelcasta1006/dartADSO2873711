@@ -3,7 +3,26 @@ import 'dart:io';
 void main() {
   //SAMUEL CASTAÑO CARDONA - EJE CONDICIONALES MULTIPLES 01
   /*
+  La empresa comercializadora Solva vende escobas, recogedores y aromatizantes, clasifica a sus
+clientes de acuerdo a la frecuencia de compras con las condiciones siguientes:
+ Si el cliente es de la categoría 1 se le descuenta el 5%
+ Si el cliente es de la categoría 2 se le descuenta el 8%
+ Si el cliente de de la categoría 3 se le descuenta el 12%
+ Si el cliente es de la categoría 4 se le descuenta el 15%
 
+ Cuando el cliente realiza una compra se generan los siguientes datos:
+ Nombre del cliente
+ Tipo de cliente
+ Cantidad comprada de escobas, recogedores y aromatizantes.
+Los precios de estos elementos son.
+• Escobas. 3000.
+• Recogedores. 2000
+• Aromatizantes. 1000
+Desarrollar un programa en que lea estos datos y calcule y muestre en pantalla:
+ Nombre del cliente
+ Subtotal a pagar
+ Descuento
+ Total a pagar.
   */
 
   //DEFINIR vbles
