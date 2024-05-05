@@ -1,6 +1,6 @@
 import 'dart:io';
 
-void main(List<String> args) {
+void main() {
   //SAMUEL CASTAÑO CARDONA - EJE CONDICIONALES DOBLES 01
   /*
   Desarrollar un algoritmo que lea dos números y los imprima en forma ascendente.

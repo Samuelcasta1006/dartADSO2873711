@@ -20,11 +20,47 @@ Se debe imprimir el nombre del granjero y la cuenta total.
   */
 
   //DEFINIR vbles
-  int numeroHectareas;
-  double cuentaTotal, descuento;
-  String? nombre;
+  String? nombreGranjero;
   int tipoFumigacion;
+  double hectareas, costoTotal, descuentoSuperficie, descuentoTotal, totalPagar;
 
-  //ENTRADA Alg
-  print("");
+  // ENTRADA Alg
+  print("Ingrese el nombre del granjero:");
+  nombreGranjero = stdin.readLineSync();
+  print("Ingrese el tipo de fumigación deseada (1-4):");
+  tipoFumigacion = int.parse(stdin.readLineSync()!);
+  print("Ingrese el número de hectáreas a fumigar:");
+  hectareas = double.parse(stdin.readLineSync()!);
+
+  // PROCESO Alg
+  switch (tipoFumigacion) {
+    case 1:
+      costoTotal = hectareas * 50000;
+      break;
+    case 2:
+      costoTotal = hectareas * 70000;
+      break;
+    case 3:
+      costoTotal = hectareas * 80000;
+      break;
+    case 4:
+      costoTotal = hectareas * 190000;
+      break;
+    default:
+      print("Tipo de fumigación no válido.");
+      return;
+  }
+  if (hectareas > 100) {
+    descuentoSuperficie = costoTotal * 0.05;
+    costoTotal -= descuentoSuperficie;
+  }
+  if (costoTotal > 1000000) {
+    descuentoTotal = (costoTotal - 1000000) * 0.1;
+    costoTotal -= descuentoTotal;
+  }
+  totalPagar = costoTotal;
+
+  // SALIDA Alg
+  print("Nombre del granjero: $nombreGranjero");
+  print("Total a pagar: \$$totalPagar");
 }

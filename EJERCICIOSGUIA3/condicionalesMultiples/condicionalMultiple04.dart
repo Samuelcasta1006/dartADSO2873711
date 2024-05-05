@@ -1,4 +1,5 @@
 import 'dart:io';
+import 'dart:math';
 
 void main() {
   //SAMUEL CASTAÑO CARDONA - EJE CONDICIONALES MULTIPLES 04
@@ -10,4 +11,36 @@ void main() {
   |          | Raiz(x) | Si x mod 4 = 2 |
   |          | X ^ 3 + 5 | Si x mod 4 = 3 |
   */
+
+//DEFINIR vbles
+  int x;
+  double resultado;
+
+//ENTRADA Alg
+  print("Ingrese el valor de x:");
+  x = int.parse(stdin.readLineSync()!);
+
+//PROCESO Alg
+  resultado = 0;
+  switch (x % 4) {
+    case 0:
+      resultado = pow(x, 2).toDouble();
+      break;
+    case 1:
+      resultado = x / 6;
+      break;
+    case 2:
+      resultado = sqrt(x);
+      break;
+    case 3:
+      resultado = pow(x, (3 + 5)).toDouble();
+      break;
+    default:
+      print('Error: El valor de x debe ser un múltiplo de 4.');
+      break;
+  }
+
+  // SALIDA Alg
+  print('El valor de la variable x es: $x');
+  print('El resultado es: $resultado');
 }

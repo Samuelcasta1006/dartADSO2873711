@@ -19,4 +19,46 @@ void main() {
 
   Construya la solución para calcular e imprimir el costo de una llamada dada la clave.
 */
+
+//DEFINIR vbles
+  int numhabladominutos, clave;
+  double costototal;
+
+//ENTRADA Alg
+  print("Ingrese el número de minutos hablados:");
+  numhabladominutos = int.parse(stdin.readLineSync()!);
+  print("Ingrese la clave de la zona geográfica:");
+  clave = int.parse(stdin.readLineSync()!);
+
+//PROCESO Alg
+  costototal = 0;
+  switch (clave) {
+    case 12:
+      costototal = 200 * numhabladominutos.toDouble();
+      break;
+    case 15:
+      costototal = 220 * numhabladominutos.toDouble();
+      break;
+    case 18:
+      costototal = 450 * numhabladominutos.toDouble();
+      break;
+    case 19:
+      costototal = 350 * numhabladominutos.toDouble();
+      break;
+    case 23:
+      costototal = 600 * numhabladominutos.toDouble();
+      break;
+    case 25:
+      costototal = 600 * numhabladominutos.toDouble();
+      break;
+    case 29:
+      costototal = 500 * numhabladominutos.toDouble();
+      break;
+    default:
+      print('Error: La clave ingresada no es válida.');
+      break;
+  }
+
+  // SALIDA Alg
+  print('El costo total de la llamada es: $costototal');
 }
