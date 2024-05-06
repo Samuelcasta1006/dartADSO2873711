@@ -10,23 +10,24 @@ del 5% si el empleado trabajó más de 40 horas. Imprimir el nombre del empleado
 Desarrollar el algoritmo y diagrama de flujo
   */
 
-  //DEFINICION vbles
-  // ignore: unused_local_variable
-  String? nombre;
-  double? horasTrabajadas, cuotaHora, sueldo, incentivo;
+//DEFINICION vbles
+   String? nombre;
+  double horasTrabajadas, cuotaHora, sueldo, incentivo;
 
   //ENTRADA Alg
   print("Ingrese su nombre");
   nombre = stdin.readLineSync();
-  print("Digite cantidad de horas trabajadas");
+  print("Digite la cantidad de horas trabajadas");
   horasTrabajadas = double.parse(stdin.readLineSync()!);
   print("Ingrese el valor de la hora");
   cuotaHora = double.parse(stdin.readLineSync()!);
 
-  //PROCESO Alg
+//PROCESO Alg
   sueldo = horasTrabajadas * cuotaHora;
   if (horasTrabajadas > 40) {
     incentivo = sueldo * 0.05;
     sueldo = sueldo + incentivo;
   }
+//SALIDA Alg
+  print("El sueldo neto es: $sueldo");
 }
