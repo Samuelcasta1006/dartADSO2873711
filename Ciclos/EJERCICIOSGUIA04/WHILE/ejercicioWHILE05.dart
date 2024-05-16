@@ -8,21 +8,18 @@ void main(List<String> args) {
   */
 
   //Definir variables
-  int numAlumnos,contador=0;
-  double promedio=0,suma=0,calificacion; 
+  int numAlumnos, contador = 0;
+  double promedio = 0, suma = 0, calificacion;
 
-  //Entrada 
+  //Entrada
   print("Digite el numero de alumnos");
-  numAlumnos=int.parse(stdin.readLineSync()!);
-  while(contador<numAlumnos){
-    print("Digite la calificacion del alumno "+(contador+1).toString());
-    calificacion=double.parse(stdin.readLineSync()!);
+  numAlumnos = int.parse(stdin.readLineSync()!);
+  while (contador < numAlumnos) {
+    print("Digite la calificacion del alumno " + (contador + 1).toString());
+    calificacion = double.parse(stdin.readLineSync()!);
     suma = suma + calificacion;
     contador++;
   }
-  promedio=suma/numAlumnos;
+  promedio = suma / numAlumnos;
   print("El promedio es : $promedio");
-
-
-
 }

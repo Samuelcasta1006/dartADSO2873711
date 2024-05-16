@@ -1,5 +1,5 @@
 import 'dart:io';
-// SAMUEL CASTAÑO CARDONA - EJE FOR 01 
+// SAMUEL CASTAÑO CARDONA - EJE FOR 01
 /*
 Calcular el promedio de un alumno que tiene 7 calificaciones en la 
 materia de Diseño Estructurado de Algoritmos.
@@ -19,5 +19,6 @@ double calcularPromedio() {
 
 void main() {
   var promedioAlumno = calcularPromedio();
-  print("El promedio del alumno en Diseño Estructurado de Algoritmos es: $promedioAlumno");
+  print(
+      "El promedio del alumno en Diseño Estructurado de Algoritmos es: $promedioAlumno");
 }

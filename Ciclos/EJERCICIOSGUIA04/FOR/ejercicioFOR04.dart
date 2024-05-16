@@ -2,13 +2,13 @@ import 'dart:io';
 
 void main() {
   // SAMUEL CASTAÑO CARDONA - EJE FOR 04
-   /*
+  /*
   
-  */ 
+  */
   List<double> calificaciones = [];
-  
+
   print("Por favor, ingrese las calificaciones de los 40 alumnos:");
-  
+
   for (var i = 0; i < 40; i++) {
     stdout.write("Calificación del alumno ${i + 1}: ");
     var calificacion = double.parse(stdin.readLineSync()!);

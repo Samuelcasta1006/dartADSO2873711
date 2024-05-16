@@ -2,9 +2,9 @@ import 'dart:io';
 
 void main() {
   // SAMUEL CASTAÑO CARDONA - EJE FOR 05
-   /*
+  /*
   
-  */ 
+  */
   stdout.write("Ingrese un número para calcular su factorial: ");
   var numero = int.parse(stdin.readLineSync()!);
 

@@ -11,25 +11,33 @@ void main(List<String> args) {
 
   //Definir variables
 
-  int autos,amarilla=0,rosada=0,roja=0,verde=0,azul=0,contador=0,numPlaca;
-  //Entrada 
+  int autos,
+      amarilla = 0,
+      rosada = 0,
+      roja = 0,
+      verde = 0,
+      azul = 0,
+      contador = 0,
+      numPlaca;
+  //Entrada
   print("Digite el numero de autos");
-  autos=int.parse(stdin.readLineSync()!);
-  while(contador<autos){
-    print("Digite el ultimo digito de la placa del auto numero "+(contador+1).toString());
-    int numPlaca=int.parse(stdin.readLineSync()!);
-    if(numPlaca==1 || numPlaca==2){
+  autos = int.parse(stdin.readLineSync()!);
+  while (contador < autos) {
+    print("Digite el ultimo digito de la placa del auto numero " +
+        (contador + 1).toString());
+    int numPlaca = int.parse(stdin.readLineSync()!);
+    if (numPlaca == 1 || numPlaca == 2) {
       amarilla++;
-    }else if(numPlaca==3 || numPlaca==4){
+    } else if (numPlaca == 3 || numPlaca == 4) {
       rosada++;
-    }else if(numPlaca==5 || numPlaca==6){
+    } else if (numPlaca == 5 || numPlaca == 6) {
       roja++;
-    } else if(numPlaca==7 || numPlaca==8){
+    } else if (numPlaca == 7 || numPlaca == 8) {
       verde++;
-    }else if(numPlaca==9 || numPlaca==0){
+    } else if (numPlaca == 9 || numPlaca == 0) {
       azul++;
     }
-    contador++;  
+    contador++;
   }
   //Salida
   print("La cantidad de autos con amarilla es: $amarilla");

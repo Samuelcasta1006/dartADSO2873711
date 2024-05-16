@@ -4,7 +4,7 @@ void main() {
   // SAMUEL CASTAÑO CARDONA - EJE FOR 08
   /*
 
-  */ 
+  */
   stdout.write("Ingrese un número para calcular su factorial: ");
   var numero = int.parse(stdin.readLineSync()!);
 
