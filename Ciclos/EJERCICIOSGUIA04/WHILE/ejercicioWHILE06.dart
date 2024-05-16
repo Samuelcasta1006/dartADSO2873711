@@ -4,7 +4,7 @@ void main(List<String> args) {
 // SAMUEL CASTAÑO CARDONA - EJE WHILE 06
 
   /*
-  Calcular el promedio de edades de hombres, mujeres y de todo un grupo de n alumnos
+    Calcular el promedio de edades de hombres, mujeres y de todo un grupo de n alumnos
   */
 
   //Definir variables

@@ -2,6 +2,7 @@ import 'dart:io';
 
 void main(List<String> args) {
 // SAMUEL CASTAÑO CARDONA - EJE WHILE 04
+
   /*
   El Depto. de Seguridad Publica y Transito del D.F. desea saber, de los n autos que entran a la ciudad de México, cuantos entran con calcomanía de cada color. Conociendo el último dígito de la placa de cada automóvil se puede determinar el color de la calcomanía utilizando la sig. relación:
 
