@@ -20,7 +20,7 @@ void main() {
   for (int i = 0; i < 50; i++) {
     stdout.write("Edad de la persona ${i + 1}: ");
     int edad = int.parse(stdin.readLineSync()!);
-    
+
     stdout.write("Peso de la persona ${i + 1}: ");
     double peso = double.parse(stdin.readLineSync()!);
 
@@ -40,9 +40,13 @@ void main() {
   }
 
   double promedioPesoNinos = totalNinos > 0 ? sumaPesosNinos / totalNinos : 0;
-  double promedioPesoJovenes = totalJovenes > 0 ? sumaPesosJovenes / totalJovenes : 0;
-  double promedioPesoAdultos = totalAdultos > 0 ? sumaPesosAdultos / totalAdultos : 0;
-  double promedioPesoAdultosMayores = totalAdultosMayores > 0 ? sumaPesosAdultosMayores / totalAdultosMayores : 0;
+  double promedioPesoJovenes =
+      totalJovenes > 0 ? sumaPesosJovenes / totalJovenes : 0;
+  double promedioPesoAdultos =
+      totalAdultos > 0 ? sumaPesosAdultos / totalAdultos : 0;
+  double promedioPesoAdultosMayores = totalAdultosMayores > 0
+      ? sumaPesosAdultosMayores / totalAdultosMayores
+      : 0;
 
   print("\nResultados:");
   print("Promedio de peso de niños: $promedioPesoNinos");

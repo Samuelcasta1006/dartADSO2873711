@@ -9,13 +9,13 @@ void main() {
   int suma = 0;
   int producto = 1;
   int numero;
-  
+
   //Proceso Algoritmo
   print("Ingrese 5 números enteros:");
   for (int i = 0; i < 5; i++) {
     stdout.write("Número ${i + 1}: ");
     numero = int.parse(stdin.readLineSync()!);
-    
+
     suma += numero;
     producto *= numero;
   }

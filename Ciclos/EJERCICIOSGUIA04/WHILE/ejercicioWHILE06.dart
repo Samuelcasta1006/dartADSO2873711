@@ -1,45 +1,59 @@
 import 'dart:io';
 
 void main(List<String> args) {
-// SAMUEL CASTAÑO CARDONA - EJE WHILE 06
-
+  //SAMUEL CASTAÑO CARDONA - EJE WHILE 06
   /*
-    Calcular el promedio de edades de hombres, mujeres y de todo un grupo de n alumnos
+  Calcular el promedio de edades de hombres, mujeres y de todo un grupo de n alumnos.
   */
 
-  //Definir variables
-  int numAlumnos,
-      contador = 0,
-      hombres = 0,
-      mujeres = 0,
-      edadesHombres = 0,
-      edadesMujeres = 0,
-      edades = 0;
-  double promedio = 0, suma = 0, promedioHombres, promedioMujeres;
+  // Definición de variables
+  int numeroAlumnos,
+      contadorAlumnos = 0,
+      cantidadHombres = 0,
+      cantidadMujeres = 0,
+      sumaEdadesHombres = 0,
+      sumaEdadesMujeres = 0,
+      edad;
+  double promedioTotal = 0,
+      sumaTotalEdades = 0,
+      promedioHombres = 0,
+      promedioMujeres = 0;
   String genero;
 
-  //Entrada
-  print("Digite el numero de alumnos");
-  numAlumnos = int.parse(stdin.readLineSync()!);
-  while (contador < numAlumnos) {
-    print("Digite la calificacion del alumno " + (contador + 1).toString());
-    edades = int.parse(stdin.readLineSync()!);
-    print("Digite el genero del alumno " + (contador + 1).toString());
+  // Entrada del algoritmo
+  print("Ingrese el número de alumnos:");
+  numeroAlumnos = int.parse(stdin.readLineSync()!);
+
+  // Proceso del algoritmo
+  while (contadorAlumnos < numeroAlumnos) {
+    print("Ingrese la edad del alumno ${contadorAlumnos + 1}:");
+    edad = int.parse(stdin.readLineSync()!);
+
+    print("Ingrese el género del alumno ${contadorAlumnos + 1} (M/F):");
     genero = stdin.readLineSync()!;
+
     if (genero == "M") {
-      edadesHombres = edadesHombres + edades;
-      hombres++;
+      sumaEdadesHombres += edad;
+      cantidadHombres++;
     } else if (genero == "F") {
-      edadesMujeres = edadesMujeres + edades;
-      mujeres++;
+      sumaEdadesMujeres += edad;
+      cantidadMujeres++;
     }
-    suma = suma + edades;
-    contador++;
+
+    sumaTotalEdades += edad;
+    contadorAlumnos++;
   }
-  promedio = suma / numAlumnos;
-  promedioHombres = edadesHombres / hombres;
-  promedioMujeres = edadesMujeres / mujeres;
-  print("El promedio es : $promedio");
-  print("El promedio de hombres es : $promedioHombres");
-  print("El promedio de mujeres es : $promedioMujeres");
+
+  promedioTotal = sumaTotalEdades / numeroAlumnos;
+  if (cantidadHombres > 0) {
+    promedioHombres = sumaEdadesHombres / cantidadHombres;
+  }
+  if (cantidadMujeres > 0) {
+    promedioMujeres = sumaEdadesMujeres / cantidadMujeres;
+  }
+
+  // Salida del algoritmo
+  print("El promedio de edades del grupo es: $promedioTotal");
+  print("El promedio de edades de los hombres es: $promedioHombres");
+  print("El promedio de edades de las mujeres es: $promedioMujeres");
 }

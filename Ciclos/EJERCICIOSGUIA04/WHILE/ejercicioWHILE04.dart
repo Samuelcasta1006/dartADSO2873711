@@ -1,49 +1,63 @@
 import 'dart:io';
 
 void main(List<String> args) {
-// SAMUEL CASTAÑO CARDONA - EJE WHILE 04
-
+  //SAMUEL CASTAÑO CARDONA - EJE WHILE 04
   /*
-  El Depto. de Seguridad Publica y Transito del D.F. desea saber, de los n autos que entran a la ciudad de México, cuantos entran con calcomanía de cada color. Conociendo el último dígito de la placa de cada automóvil se puede determinar el color de la calcomanía utilizando la sig. relación:
+  El Departamento de Seguridad Pública y Tránsito del D.F. desea saber, de los n autos que entran a la Ciudad de México, cuántos entran con calcomanía de cada color. Conociendo el último dígito de la placa de cada automóvil se puede determinar el color de la calcomanía utilizando la siguiente relación:
 
-  DIGITO: 1 o 2, 3 o 4, 5 o 6, 7 o 8, 9 o 0
-  COLOR: amarilla, rosada, roja, verde, azul 
+  +--------+-----------+
+  | Dígito |   Color   |
+  +--------+-----------+
+  |  1, 2  | Amarilla  |
+  |  3, 4  | Rosada    |
+  |  5, 6  | Roja      |
+  |  7, 8  | Verde     |
+  |  9, 0  | Azul      |
+  +--------+-----------+
   */
 
-  //Definir variables
+  // Definición de variables
+  int numeroAutos,
+      contadorAmarilla = 0,
+      contadorRosada = 0,
+      contadorRoja = 0,
+      contadorVerde = 0,
+      contadorAzul = 0,
+      contadorAutos = 0,
+      ultimoDigitoPlaca;
 
-  int autos,
-      amarilla = 0,
-      rosada = 0,
-      roja = 0,
-      verde = 0,
-      azul = 0,
-      contador = 0,
-      numPlaca;
-  //Entrada
-  print("Digite el numero de autos");
-  autos = int.parse(stdin.readLineSync()!);
-  while (contador < autos) {
-    print("Digite el ultimo digito de la placa del auto numero " +
-        (contador + 1).toString());
-    int numPlaca = int.parse(stdin.readLineSync()!);
-    if (numPlaca == 1 || numPlaca == 2) {
-      amarilla++;
-    } else if (numPlaca == 3 || numPlaca == 4) {
-      rosada++;
-    } else if (numPlaca == 5 || numPlaca == 6) {
-      roja++;
-    } else if (numPlaca == 7 || numPlaca == 8) {
-      verde++;
-    } else if (numPlaca == 9 || numPlaca == 0) {
-      azul++;
+  // Entrada del algoritmo
+  print("Ingrese el número de autos:");
+  numeroAutos = int.parse(stdin.readLineSync()!);
+
+  // Proceso del algoritmo
+  while (contadorAutos < numeroAutos) {
+    print(
+        "Ingrese el último dígito de la placa del auto número ${contadorAutos + 1}:");
+    ultimoDigitoPlaca = int.parse(stdin.readLineSync()!);
+
+    if (ultimoDigitoPlaca == 1 || ultimoDigitoPlaca == 2) {
+      contadorAmarilla++;
+    } else if (ultimoDigitoPlaca == 3 || ultimoDigitoPlaca == 4) {
+      contadorRosada++;
+    } else if (ultimoDigitoPlaca == 5 || ultimoDigitoPlaca == 6) {
+      contadorRoja++;
+    } else if (ultimoDigitoPlaca == 7 || ultimoDigitoPlaca == 8) {
+      contadorVerde++;
+    } else if (ultimoDigitoPlaca == 9 || ultimoDigitoPlaca == 0) {
+      contadorAzul++;
+    } else {
+      print("Dígito no válido, por favor ingrese un número del 0 al 9.");
+      continue;
     }
-    contador++;
+
+    contadorAutos++;
   }
-  //Salida
-  print("La cantidad de autos con amarilla es: $amarilla");
-  print("La cantidad de autos con rosada es: $rosada");
-  print("La cantidad de autos con roja es: $roja");
-  print("La cantidad de autos con verde es: $verde");
-  print("La cantidad de autos con azul es: $azul");
+
+  // Salida del algoritmo
+  print("La cantidad de autos con calcomanía amarilla es: $contadorAmarilla");
+  print("La cantidad de autos con calcomanía rosada es: $contadorRosada");
+  print("La cantidad de autos con calcomanía roja es: $contadorRoja");
+  print("La cantidad de autos con calcomanía verde es: $contadorVerde");
+  print("La cantidad de autos con calcomanía azul es: $contadorAzul");
 }

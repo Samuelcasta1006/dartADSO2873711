@@ -1,30 +1,39 @@
 import 'dart:io';
 
 void main(List<String> args) {
-// SAMUEL CASTAÑO CARDONA - EJE WHILE 03
+  //SAMUEL CASTAÑO CARDONA - EJE WHILE 03
   /*
-
+  Determinar  cuantos  hombres  y  cuantas  mujeres  se  encuentran  en  un  grupo  de  n  personas, 
+  suponiendo que los datos son extraídos alumno por alumno.
   */
 
-  //Definir variables
+  // Definición de variables
   String genero;
-  int contador = 0, numPersonas, contadorHombre = 0, contadorMujer = 0;
+  int contadorPersonas = 0,
+      numeroPersonas,
+      cantidadHombres = 0,
+      cantidadMujeres = 0;
 
-  //Entrada
-  print("Digite el numero de personas");
-  numPersonas = int.parse(stdin.readLineSync()!);
-  while (contador < numPersonas) {
-    for (int i = 0; i < numPersonas; i++) {
-      print("Digite el genero de la persona");
-      genero = stdin.readLineSync()!;
-      if (genero == "M") {
-        contadorHombre++;
-      } else if (genero == "F") {
-        contadorMujer++;
-      }
-      contador++;
+  // Entrada del algoritmo
+  print("Ingrese el número de personas:");
+  numeroPersonas = int.parse(stdin.readLineSync()!);
+
+  // Proceso del algoritmo
+  while (contadorPersonas < numeroPersonas) {
+    print("Ingrese el género de la persona (M/F):");
+    genero = stdin.readLineSync()!;
+    if (genero == "M") {
+      cantidadHombres++;
+    } else if (genero == "F") {
+      cantidadMujeres++;
+    } else {
+      print("Género no válido, por favor ingrese 'M' o 'F'.");
+      continue;
     }
-    print("Hay $contadorHombre hombres");
-    print("Hay $contadorMujer mujeres");
+    contadorPersonas++;
   }
+
+  // Salida del algoritmo
+  print("Hay $cantidadHombres hombres.");
+  print("Hay $cantidadMujeres mujeres.");
 }

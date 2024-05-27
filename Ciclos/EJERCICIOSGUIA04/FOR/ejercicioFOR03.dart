@@ -15,7 +15,7 @@ void main() {
   for (int i = 0; i < 20; i++) {
     stdout.write("Número ${i + 1}: ");
     int numero = int.parse(stdin.readLineSync()!);
-    
+
     if (numero > 0) {
       positivos++;
     } else if (numero < 0) {

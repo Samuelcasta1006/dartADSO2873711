@@ -14,10 +14,10 @@ void main() {
   numero = int.parse(stdin.readLineSync()!);
 
   // Proceso algoritmo
-  for (int i = 1; i <= numero; i++) { 
+  for (int i = 1; i <= numero; i++) {
     factorial *= i;
   }
 
   // Salida algoritmo
-  print("El factorial de $numero es: $factorial"); 
+  print("El factorial de $numero es: $factorial");
 }
