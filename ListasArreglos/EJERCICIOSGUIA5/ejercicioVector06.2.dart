@@ -20,8 +20,7 @@ void main(List<String> args) {
   }
   //Ciclo para multiplicar Vectores invertidos
   for (int i = 0; i < vectorA.length; i++) {
-    multiplicacion = vectorA[i] * vectorBInvertido[i];
-    vectorC.add(multiplicacion);
+    multiplicacion = vectorA[i] * vectorB[vectorBInvertido.length - 1 - i];
   }
   print(vectorA);
   print(vectorB);

@@ -9,8 +9,8 @@ void main(List<String> args) {
   */
 
 //Se define una lista vacia
-  List<double>  numerosA = [];
-  List<double>  numerosB = [];
+  List<double> numerosA = [];
+  List<double> numerosB = [];
   List<double> numerosC = [];
   int cantNumeros = 10;
   double num;
@@ -24,15 +24,10 @@ void main(List<String> args) {
     numerosB.add(num);
 
     for (var i = 0; i < cantNumeros; i++) {
-        numerosC.add(numerosA[i] + numerosB[i]);
+      numerosC.add(numerosA[i] + numerosB[i]);
     }
     print(numerosA);
     print(numerosB);
     print(numerosC);
-    
-    }
-
-
-
-  
+  }
 }

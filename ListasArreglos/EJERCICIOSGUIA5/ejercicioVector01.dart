@@ -8,7 +8,7 @@ void main(List<String> args) {
   lista de valores mayores que el promedio.
   */
 
- //se define una lista vacía
+  //se define una lista vacía
   List<double> numeros = [];
   List<double> mayoresprom = [];
   int cantNumeros = 10;
