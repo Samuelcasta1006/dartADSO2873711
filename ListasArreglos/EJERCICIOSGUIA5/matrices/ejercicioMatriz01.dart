@@ -1,7 +1,7 @@
 import 'dart:io';
 
 void main(List<String> args) {
-  //SAMUEL CASTAÑO CARDONA - EJE MATRICES 01 
+  //SAMUEL CASTAÑO CARDONA - EJE MATRICES 01
   /*
     Hacer un algoritmo que almacene números en una matriz de 5 * 6. Imprimir la suma de los números almacenados en la matriz.
   */
