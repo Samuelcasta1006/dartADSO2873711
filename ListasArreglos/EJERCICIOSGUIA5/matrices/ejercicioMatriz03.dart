@@ -13,51 +13,41 @@ void main(List<String> args) {
     | Articulo 5 | 12 | 20 | 10 |
   */
 
-  int numArticulos = 5;
-  int numTurnos = 3;
+  List<List<int>> matrizProduccion = [
+    [30, 40, 20],
+    [10, 12, 15],
+    [8, 10, 7],
+    [25, 30, 30],
+    [12, 20, 10],
+  ];
 
-  List<String> nombresArticulos = List.filled(numArticulos, '');
-  List<List<int>> produccion =
-      List.generate(numArticulos, (_) => List.filled(numTurnos, 0));
+  List<int> totalArticulos = [0, 0, 0, 0, 0];
+  List<int> totalTurnos = [0, 0, 0];
+  int mayorProduccion = 0, posicionMayorProd = 0;
 
-  for (int i = 0; i < numArticulos; i++) {
-    print('Ingrese el nombre del artículo ${i + 1}:');
-    nombresArticulos[i] = stdin.readLineSync()!;
-    for (int j = 0; j < numTurnos; j++) {
-      print(
-          'Ingrese la producción del artículo "${nombresArticulos[i]}" en el turno ${j + 1}:');
-      produccion[i][j] = int.parse(stdin.readLineSync()!);
+  for (int i = 0; i < matrizProduccion.length; i++) {
+    for (int j = 0; j < matrizProduccion[0].length; j++) {
+      //Se va sumando los valores por articulo (CADA FILA)
+      totalArticulos[i] += matrizProduccion[i][j];
+      totalTurnos[j] += matrizProduccion[i][j];
     }
   }
-
-  List<int> totalProduccionPorArticulo = List.filled(numArticulos, 0);
-  List<int> totalProduccionPorTurno = List.filled(numTurnos, 0);
-
-  for (int i = 0; i < numArticulos; i++) {
-    for (int j = 0; j < numTurnos; j++) {
-      totalProduccionPorArticulo[i] += produccion[i][j];
-      totalProduccionPorTurno[j] += produccion[i][j];
+  print(totalArticulos);
+  print(totalTurnos);
+  for (int i = 0; i < totalArticulos.length; i++) {
+    print("El total del Articulo #${i + 1} es: ${totalArticulos[i]}");
+  }
+  print('*' * 40);
+  for (int i = 0; i < totalTurnos.length; i++) {
+    print("El total del Articulo #${i + 1} es: ${totalTurnos[i]}");
+  }
+  //Sacar el articulo con mayor produccion
+  for (int i = 0; i < totalArticulos.length; i++) {
+    if (totalArticulos[i] > mayorProduccion) {
+      mayorProduccion = totalArticulos[i];
+      posicionMayorProd = i;
     }
   }
-
-  int maxProduccion = totalProduccionPorArticulo[0];
-  int indiceMaxProduccion = 0;
-  for (int i = 1; i < numArticulos; i++) {
-    if (totalProduccionPorArticulo[i] > maxProduccion) {
-      maxProduccion = totalProduccionPorArticulo[i];
-      indiceMaxProduccion = i;
-    }
-  }
-
-  print('\nReporte de Producción:');
-  for (int i = 0; i < numArticulos; i++) {
-    print(
-        'Total producción del artículo "${nombresArticulos[i]}": ${totalProduccionPorArticulo[i]}');
-  }
-  for (int j = 0; j < numTurnos; j++) {
-    print(
-        'Total producción en el turno ${j + 1}: ${totalProduccionPorTurno[j]}');
-  }
-  print(
-      'El artículo con mayor producción es "${nombresArticulos[indiceMaxProduccion]}" con una producción de $maxProduccion unidades.');
+  print("El articulo de mayor produccion es el articulo #${posicionMayorProd}");
+  stdout.write("Con una produccion de $mayorProduccion");
 }
