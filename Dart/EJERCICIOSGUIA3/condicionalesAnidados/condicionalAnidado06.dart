@@ -9,7 +9,7 @@ El dueño de una empresa desea planificar las decisiones financieras que tomara 
 •$200000 para mobiliario
 •y del resto, la mitad será para la compra de insumos y la otra para otorgar incentivos al personal.Solicitar el capital y en base a este desplegar que cantidades se destinaran para la compra de insumos e incentivos al personal y, en caso de que fuera necesario, a cuanto ascendería la cantidad que se pediría al banco.
   */
-  
+
 //DEFINIR vbles
   double capital, insumos, prestamo;
 

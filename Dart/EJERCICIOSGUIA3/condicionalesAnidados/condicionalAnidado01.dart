@@ -5,7 +5,7 @@ void main() {
   /*
   Dado tres números calcular el mayor
   */
-  
+
 //DEFINIR vbles
   double num1, num2, num3;
 

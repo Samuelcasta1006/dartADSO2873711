@@ -8,7 +8,7 @@ void main() {
  •Descuento es 10% si el monto es mayor a 10000 pesos y menor o igual a 20000 pesos.
  •no hay descuento si el monto es menor o igual a 10000 pesos.
   */
-  
+
 //DEFINIR vbleS
   double monto, descuento;
 

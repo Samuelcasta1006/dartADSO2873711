@@ -32,4 +32,72 @@ o Marcadores (3)
 o Lápiz (1)
 o Lapicero (1)
   */
+
+//Definición variables
+  int numhablados, clave;
+  double costototal;
+
+//Entrada
+  print("Ingrese el número de minutos hablados:");
+  numhablados = int.parse(stdin.readLineSync()!);
+  print("Ingrese la clave de la zona geográfica:");
+  clave = int.parse(stdin.readLineSync()!);
+
+//Proceso
+  costototal = 0;
+  switch (clave) {
+    case 12:
+      if (numhablados > 4) {
+        costototal = (numhablados - 4) * 150;
+      }
+      costototal = 200 * numhablados.toDouble();
+      break;
+
+    case 15:
+      if (numhablados > 4) {
+        costototal = (numhablados - 4) * 180;
+      }
+      costototal = 220 * numhablados.toDouble();
+      break;
+
+    case 18:
+      if (numhablados > 4) {
+        costototal = (numhablados - 4) * 350;
+      }
+      costototal = 450 * numhablados.toDouble();
+      break;
+
+    case 19:
+      if (numhablados > 4) {
+        costototal = (numhablados - 4) * 270;
+      }
+      costototal = 350 * numhablados.toDouble();
+      break;
+
+    case 23:
+      if (numhablados > 4) {
+        costototal = (numhablados - 4) * 460;
+      }
+      costototal = 600 * numhablados.toDouble();
+      break;
+
+    case 25:
+      if (numhablados > 4) {
+        costototal = (numhablados - 4) * 460;
+      }
+      costototal = 600 * numhablados.toDouble();
+      break;
+
+    case 29:
+      if (numhablados > 4) {
+        costototal = (numhablados - 4) * 390;
+      }
+      costototal = 500 * numhablados.toDouble();
+      break;
+    default:
+      print('Error: La clave ingresada no es válida.');
+  }
+
+  // Salida
+  print('El costo total de la llamada es: $costototal');
 }
